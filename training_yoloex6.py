@@ -29,12 +29,11 @@ Upload the data.zip file to the Google Colab instance by clicking the "Files" ic
 
 !pip install ultralytics
 
-"""Now that the data is organized and the config file is created, we're ready to start training! First, there are a few important parameters to decide on. Visit my article on Training YOLO Models Locally to learn more about these parameters and how to choose them.
+"""Now that the data is organized and the config file is created, we're ready to start training! First, there are a few important parameters to decide on. 
 
 Model architecture & size (model):
 
-There are several YOLO11 models sizes available to train, including yolo11n.pt, yolo11s.pt, yolo11m.pt, yolo11l.pt, and yolo11xl.pt. Larger models run slower but have higher accuracy, while smaller models run faster but have lower accuracy. I made a brief YouTube video that compares performance of different YOLO models on a Raspberry Pi 5 and a laptop with a RTX 4050 GPU, check it out here to get a sense of their speed accuracy. If you aren't sure which model size to use, yolo11s.pt is a good starting point.
-
+There are several YOLO11 models sizes available to train, including yolo11n.pt, yolo11s.pt, yolo11m.pt, yolo11l.pt, and yolo11xl.pt. Larger models run slower but have higher accuracy, while smaller models run faster but have lower accuracy. 
 You can also train YOLOv8 or YOLOv5 models by substituting yolo11 for yolov8 or yolov5.
 
 Number of epochs (epochs)
@@ -65,7 +64,7 @@ model.train(
     imgsz=640,
     batch=16,
 
-    # LA MAGIA (Estabilidad)
+    # (Estabilidad)
     optimizer='AdamW',
     lr0=0.0005,           #
     lrf=0.01,             #
